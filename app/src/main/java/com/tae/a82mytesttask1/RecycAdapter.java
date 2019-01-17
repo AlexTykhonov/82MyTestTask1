@@ -1,3 +1,6 @@
+// нужно вызывать сервер перед запуском приложения, например через постман
+// "https://spring-boot-mysql-server-part0.herokuapp.com/"
+
 package com.tae.a82mytesttask1;
 
 import android.content.Context;
@@ -39,9 +42,7 @@ public class RecycAdapter extends RecyclerView.Adapter<RecycAdapter.ViewHolder> 
         Mark mark = markArrayList.get(i);
         viewHolder.markId.setText(mark.getId().toString());
         viewHolder.markTitle.setText(mark.getTitle());
-        viewHolder.markAuthor.setText(mark.getAuthor());
         viewHolder.markDescription.setText(mark.getDescription());
-        viewHolder.markPublished.setText(mark.getPublished().toString());
 
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,9 +53,7 @@ public class RecycAdapter extends RecyclerView.Adapter<RecycAdapter.ViewHolder> 
                 Intent intent = new Intent(context, MarkActivity.class);
                 intent.putExtra("id", markArrayList.get(i).getId());
                 intent.putExtra("title", markArrayList.get(i).getTitle());
-                intent.putExtra("author", markArrayList.get(i).getAuthor());
                 intent.putExtra("description", markArrayList.get(i).getDescription());
-                intent.putExtra("published", markArrayList.get(i).getPublished());
                 context.startActivity(intent);
             }
         });
@@ -68,18 +67,14 @@ public class RecycAdapter extends RecyclerView.Adapter<RecycAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder{
         final TextView markId;
         final TextView markTitle;
-        final TextView markAuthor;
         final TextView markDescription;
-        final TextView markPublished;
         final LinearLayout linearLayout;
         final CardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.markId = itemView.findViewById(R.id.markId);
             this.markTitle = itemView.findViewById(R.id.markTitle);
-            this.markAuthor = itemView.findViewById(R.id.markAuthor);
             this.markDescription = itemView.findViewById(R.id.markDescription);
-            this.markPublished = itemView.findViewById(R.id.markPublished);
             this.linearLayout = itemView.findViewById(R.id.linearLayout);
             this.cardView = itemView.findViewById(R.id.card_view);
         }

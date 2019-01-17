@@ -9,80 +9,61 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textViewId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/cardview_light_background"
             android:text="ID"
             tools:layout_editor_absoluteX="102dp"
             tools:layout_editor_absoluteY="177dp" />
+
         <EditText
             android:id="@+id/editMarkId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            />
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
             android:text="Title"
+            android:textColor="@color/cardview_light_background"
             tools:layout_editor_absoluteX="102dp"
             tools:layout_editor_absoluteY="177dp" />
+
         <EditText
             android:id="@+id/editTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            />
+            android:inputType="text" />
 
-        <TextView
-            android:id="@+id/textViewAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Author"
-            tools:layout_editor_absoluteX="102dp"
-            tools:layout_editor_absoluteY="177dp" />
-        <EditText
-            android:id="@+id/editAuthor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            />
 
         <TextView
             android:id="@+id/textViewDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/cardview_light_background"
             android:text="Description"
             tools:layout_editor_absoluteX="102dp"
             tools:layout_editor_absoluteY="177dp" />
+
         <EditText
             android:id="@+id/editDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            />
-
-        <TextView
-            android:id="@+id/textViewPublishDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Publish Date"
-            tools:layout_editor_absoluteX="102dp"
-            tools:layout_editor_absoluteY="177dp" />
-        <EditText
-            android:id="@+id/editDatePublish"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            />
+            android:inputType="text" />
 
 
         <Button

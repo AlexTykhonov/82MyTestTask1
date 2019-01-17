@@ -44,14 +44,7 @@
             tools:layout_editor_absoluteX="80dp"
             tools:layout_editor_absoluteY="269dp" />
 
-        <TextView
-            android:id="@+id/markAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:padding="2dp"
-            tools:layout_editor_absoluteX="67dp"
-            tools:layout_editor_absoluteY="158dp" />
+
 
         <TextView
             android:id="@+id/markDescription"
@@ -62,14 +55,6 @@
             tools:layout_editor_absoluteX="49dp"
             tools:layout_editor_absoluteY="158dp" />
 
-        <TextView
-            android:id="@+id/markPublished"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:padding="2dp"
-            tools:layout_editor_absoluteX="118dp"
-            tools:layout_editor_absoluteY="333dp" />
 
     </LinearLayout>
 

@@ -1,3 +1,6 @@
+// нужно вызывать сервер перед запуском приложения, например через постман
+// "https://spring-boot-mysql-server-part0.herokuapp.com/"
+
 package com.tae.a82mytesttask1;
 
 import com.google.gson.annotations.Expose;
@@ -11,15 +14,10 @@ public class Mark {
     @SerializedName("title")
     @Expose
     private String title;
-    @SerializedName("author")
-    @Expose
-    private String author;
+
     @SerializedName("description")
     @Expose
     private String description;
-    @SerializedName("published")
-    @Expose
-    private Integer published;
 
     public Integer getId() {
         return id;
@@ -37,28 +35,12 @@ public class Mark {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Integer getPublished() {
-        return published;
-    }
-
-    public void setPublished(Integer published) {
-        this.published = published;
     }
 
 }

@@ -1,3 +1,6 @@
+// нужно вызывать сервер перед запуском приложения, например через постман
+// "https://spring-boot-mysql-server-part0.herokuapp.com/"
+
 package com.tae.a82mytesttask1;
 
 
@@ -16,9 +19,7 @@ public class MarkActivity extends AppCompatActivity {
     MarkInterface markInterface;
     EditText editFormId;
     EditText editFormTitle;
-    EditText editFormAuthor;
     EditText editFormDescription;
-    EditText editFormPublishDate;
     Button buttonSave;
     Button buttonDelete;
 
@@ -29,9 +30,7 @@ public class MarkActivity extends AppCompatActivity {
 
         editFormId = findViewById(R.id.editMarkId);
         editFormTitle = findViewById(R.id.editTitle);
-        editFormAuthor = findViewById(R.id.editAuthor);
         editFormDescription = findViewById(R.id.editDescription);
-        editFormPublishDate = findViewById(R.id.editDatePublish);
         buttonDelete = findViewById(R.id.buttonDelete);
         buttonSave = findViewById(R.id.buttonSave);
 
@@ -46,9 +45,7 @@ public class MarkActivity extends AppCompatActivity {
 
         editFormId.setText(markId);
         editFormTitle.setText(title);
-        editFormAuthor.setText(author);
         editFormDescription.setText(description);
-        editFormPublishDate.setText(published + "");
 
         if(markId!=null && markId.trim().length()>0){
             editFormId.setFocusable(false);
@@ -63,9 +60,7 @@ public class MarkActivity extends AppCompatActivity {
                 Mark mark = new Mark();
                 mark.setId(editFormId.getId());
                 mark.setTitle(editFormTitle.getText().toString());
-                mark.setAuthor(editFormAuthor.getText().toString());
                 mark.setDescription(editFormDescription.getText().toString());
-                mark.setPublished(Integer.parseInt(editFormPublishDate.getText().toString()));
 
                 if(markId!=null && markId.trim().length()>0&&(Integer.parseInt(markId)!=0)){
                     updateMark(Integer.parseInt(markId), mark);

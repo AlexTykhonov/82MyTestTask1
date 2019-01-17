@@ -1,3 +1,5 @@
+// нужно вызывать сервер перед запуском приложения, например через постман
+// "https://spring-boot-mysql-server-part0.herokuapp.com/"
 package com.tae.a82mytesttask1;
 
 import android.content.Intent;
